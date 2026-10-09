@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UNFILTERED — Student Life</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="hero">
+
+        <!-- Background video -->
+        <video class="background-video"
+               autoplay
+               muted
+               loop
+               playsinline
+               poster="">
+
+            <source src="videos/background.mp4" type="video/mp4">
+
+        </video>
+
+        <!-- Cinematic overlay -->
+        <div class="overlay"></div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+
+            <a href="#" class="logo">UNFILTERED<span>.</span></a>
+
+            <span class="nav-text">A STUDENT LIFE STORY</span>
+
+            <button class="menu-btn" id="menuBtn"
+                    aria-label="Toggle menu"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+        <!-- Hero content -->
+        <section class="hero-content">
+
+            <p class="eyebrow">
+                <span class="dot"></span>
+                BEYOND THE CLASSROOM
+            </p>
+
+            <h1>
+                Unfiltered<br>
+                <span>Student Smile.</span>
+            </h1>
+
+            <p class="subtitle">
+                The story behind every smile.
+            </p>
+
+            <p class="description">
+                Between deadlines, friendships and little victories,
+                there's a story we don't always tell.
+            </p>
+
+            <a href="#next-section" class="explore-btn">
+                <span>EXPLORE THE STORY</span>
+                <span class="arrow">↗</span>
+            </a>
+
+        </section>
+
+        <!-- Bottom details -->
+        <div class="hero-footer">
+
+            <p>REAL MOMENTS. REAL PEOPLE.</p>
+
+            <a href="#next-section" class="scroll-indicator">
+                <span class="scroll-line"></span>
+                SCROLL TO DISCOVER
+                <span class="down-arrow">↓</span>
+            </a>
+
+            <p class="edition">THE STUDENT EDITION · 2026</p>
+
+        </div>
+
+    </main>
+
+    <!-- Next section: connects to scrolling -->
+    
+<!-- CTRL SECTION -->
+<section class="ctrl-section" id="next-section">
+
+    <div class="ctrl-grain"></div>
+
+    <div class="ctrl-heading">
+        <p class="ctrl-eyebrow">CHAPTER 02 — WHAT WE HIDE</p>
+        <h2>Behind the smile,</h2>
+        <p>there's a voice we rarely hear.</p>
+    </div>
+
+    <div class="ctrl-scene">
+
+        <!-- LEFT: STUDENT -->
+        <div class="student-side">
+
+            <div class="student-photo"></div>
+
+            <div class="student-caption">
+                <span>01 / THE EVERYDAY STUDENT</span>
+                <p>Smiling outside.<br>Thinking about everything.</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: DIARY -->
+        <div class="diary-side">
+
+            <p class="diary-intro">SOME THINGS STAY UNSAID...</p>
+
+            <button class="diary-trigger" id="diaryTrigger"
+                    aria-label="Open the CTRL diary"
+                    aria-expanded="false">
+
+                <div class="diary-book" id="diaryBook">
+
+                    <div class="diary-cover">
+
+                        <div class="diary-cover-border">
+                            <span class="diary-small">PERSONAL JOURNAL</span>
+                            <span class="diary-title">CTRL</span>
+                            <span class="diary-subtitle">
+                                the things<br>we never say
+                            </span>
+                            <span class="diary-star">✳</span>
+                        </div>
+
+                    </div>
+
+                    <div class="diary-pages">
+                        <span class="page-lines"></span>
+                    </div>
+
+                </div>
+
+                <span class="diary-click-hint" id="diaryHint">
+                    CLICK TO OPEN ↗
+                </span>
+
+            </button>
+
+            <!-- Letter appears on click -->
+            <div class="letter-card" id="letterCard" aria-hidden="true">
+
+                <button class="close-letter" id="closeLetter"
+                        aria-label="Close letter">×</button>
+
+                <p class="letter-date">A LETTER TO THE UNSEEN SELF</p>
+
+                <h3>Dear me,</h3>
+
+                <p>
+                    I know you smile even on the days when everything
+                    feels a little too much.
+                </p>
+
+                <p>
+                    The presentations you fear, the friendships you
+                    wish you had, the expectations you carry and the
+                    doubts you never speak about.
+                </p>
+
+                <p>
+                    You don't have to have it all figured out.
+                    You are allowed to be a work in progress.
+                </p>
+
+                <p class="letter-ending">
+                    Take a breath. You're doing better than you think.
+                </p>
+
+                <span class="letter-signature">— from you, to you ♡</span>
+
+                <button class="release-btn" id="releaseBtn">
+                    LET IT OUT <span>↗</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Words released from the diary -->
+    <div class="word-field" id="wordField" aria-live="polite"></div>
+
+    <p class="ctrl-footer" id="ctrlFooter">
+        SOME THOUGHTS DESERVE TO BE HEARD.
+    </p>
+
+</section>
+```html
+<!-- ================= PAGE 3: NAINA'S STORY ================= -->
+
+<section id="page3" class="naina-story">
+
+    <div class="naina-wrapper">
+
+        <!-- STORY INTRODUCTION -->
+        <header class="naina-header">
+            <span class="naina-label">CHAPTER 03 — THE PRESSURE WE HIDE</span>
+
+            <h1>The story behind <em>her smile.</em></h1>
+
+            <p>
+                Meet Naina. A student, a daughter, a friend —
+                and a girl trying to keep up with everything.
+            </p>
+        </header>
+
+        <div class="naina-grid">
+
+            <!-- LEFT: HER STORY -->
+            <div class="naina-story-text">
+
+                <h2>Everyone thinks she's doing fine.</h2>
+
+                <p class="naina-intro">
+                    She smiles in class, laughs with her friends and says,
+                    "Don't worry, I'll manage." But when she gets home,
+                    the smile fades and the overthinking begins.
+                </p>
+
+                <article class="naina-pressure">
+                    <div class="naina-icon">📚</div>
+                    <div>
+                        <h3>01. The Assignment Fear</h3>
+                        <p>
+                            Three assignments. Two deadlines tomorrow.
+                            She opens her laptop, stares at the screen
+                            and wonders, "Where do I even start?"
+                        </p>
+                    </div>
+                </article>
+
+                <article class="naina-pressure">
+                    <div class="naina-icon">🎤</div>
+                    <div>
+                        <h3>02. The Stage Fear</h3>
+                        <p>
+                            She knows her topic. She practised all night.
+                            But the moment she stands in front of the class,
+                            her hands shake and every word disappears.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="naina-pressure">
+                    <div class="naina-icon">📊</div>
+                    <div>
+                        <h3>03. The Marks Pressure</h3>
+                        <p>
+                            One bad result makes her forget all the times
+                            she tried. She starts believing that marks
+                            define her worth.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="naina-pressure">
+                    <div class="naina-icon">⏳</div>
+                    <div>
+                        <h3>04. The Comparison Trap</h3>
+                        <p>
+                            Her friends seem ahead of her. Someone has
+                            better grades, someone has a better internship.
+                            She forgets that her journey is her own.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="naina-pressure">
+                    <div class="naina-icon">🌙</div>
+                    <div>
+                        <h3>05. The 2 AM Thoughts</h3>
+                        <p>
+                            "What if I disappoint my parents?
+                            What if I'm not good enough?"
+                            The room is quiet, but her mind won't stop.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- NAINA'S WORDS -->
+                <blockquote class="naina-quote">
+                    <span class="naina-quote-mark">“</span>
+                    <p>
+                        I'm not afraid of working hard.
+                        I'm afraid that even after giving my best,
+                        I still won't be enough.
+                    </p>
+                    <cite>— Naina, 2:13 AM</cite>
+                </blockquote>
+
+            </div>
+
+            <!-- RIGHT: CARTOON CHARACTER -->
+            <div class="naina-visual">
+
+                <div class="naina-visual-title">
+                    <span class="naina-dot"></span>
+                    OUTSIDE VS. INSIDE
+                </div>
+
+                <div class="naina-art">
+
+                    <!-- Cartoon-style character, no image file required -->
+                    <div class="naina-thought thought-a">
+                        📅 Deadline tonight!
+                    </div>
+
+                    <div class="naina-thought thought-b">
+                        😰 What if I fail?
+                    </div>
+
+                    <div class="naina-thought thought-c">
+                        🎤 Everyone is watching...
+                    </div>
+
+                    <div class="naina-thought thought-d">
+                        💭 Am I enough?
+                    </div>
+
+                    <div class="naina-cartoon" role="img"
+                         aria-label="Cute cartoon student Naina sitting with her books">
+                        <div class="naina-hair"></div>
+                        <div class="naina-face">
+                            <span class="naina-eye eye-left"></span>
+                            <span class="naina-eye eye-right"></span>
+                            <span class="naina-blush blush-left"></span>
+                            <span class="naina-blush blush-right"></span>
+                            <span class="naina-mouth"></span>
+                        </div>
+                        <div class="naina-neck"></div>
+                        <div class="naina-body">
+                            <span class="hoodie-pocket"></span>
+                        </div>
+                        <div class="naina-arm arm-left"></div>
+                        <div class="naina-arm arm-right"></div>
+                        <div class="naina-book book-one"></div>
+                        <div class="naina-book book-two"></div>
+                        <div class="naina-book book-three"></div>
+                    </div>
+
+                    <div class="naina-art-caption">
+                        A thousand thoughts. One quiet smile.
+                    </div>
+
+                </div>
+
+                <!-- OUTSIDE / INSIDE CARDS -->
+                <div class="naina-contrast">
+
+                    <div class="naina-contrast-card">
+                        <span>THE OUTSIDE</span>
+                        <h3>☺ "I'm fine."</h3>
+                        <p>Smiling. Helping others. Saying yes to everything.</p>
+                    </div>
+
+                    <div class="naina-contrast-card contrast-dark">
+                        <span>THE INSIDE</span>
+                        <h3>☁ "I'm exhausted."</h3>
+                        <p>Overthinking. Self-doubt. Fear of letting people down.</p>
+                    </div>
+
+                </div>
+
+                <div class="naina-message">
+                    <span>AN IMPORTANT REMINDER</span>
+                    <p>
+                        You are a student, not a marksheet.
+                        You are a person, not a performance.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- STORY ENDING -->
+        <footer class="naina-ending">
+            <p>
+                Sometimes, the person who says "I'm fine"
+                is the one who needs someone to ask again.
+            </p>
+
+            <span>Be kind. Listen without judging. Make room for honest conversations.</span>
+
+            <a href="#page4" class="naina-next">
+                CONTINUE THE STORY <span>↓</span>
+            </a>
+        </footer>
+
+    </div>
+</section>
+<!-- NAINA'S PROBLEMS AND SOLUTIONS -->
+<section class="naina-solutions" id="naina-solutions">
+
+  <div class="ns-heading">
+    <p class="ns-label">CHAPTER 03 — FINDING HER WAY</p>
+    <h2>She deserves more than <em>just coping.</em></h2>
+    <p class="ns-intro">
+      Understanding the pressure is the first step.
+      Learning how to deal with it is the next.
+    </p>
+  </div>
+
+  <div class="ns-story-note">
+    <span class="ns-dot"></span>
+    A SMALL REMINDER FOR NAINA
+    <p>
+      She doesn't need to fix her entire life in one day.
+      She just needs a little support, one step at a time.
+    </p>
+  </div>
+
+  <div class="ns-solutions-grid">
+
+    <details class="ns-card">
+      <summary>
+        <span class="ns-number">01</span>
+        <span class="ns-card-title">
+          <strong>The Assignment Fear</strong>
+          <small>When everything feels too much.</small>
+        </span>
+        <span class="ns-plus">+</span>
+      </summary>
+      <div class="ns-content">
+        <p class="ns-problem">
+          Too many assignments, too little time,
+          and no idea where to begin.
+        </p>
+        <h4>What might help her?</h4>
+        <ul>
+          <li>Write down assignments and deadlines.</li>
+          <li>Start with the most urgent task.</li>
+          <li>Break big tasks into smaller steps.</li>
+          <li>Take short breaks while studying.</li>
+        </ul>
+        <p class="ns-quote">
+          "You don't have to do everything at once.
+          Just begin with one thing."
+        </p>
+      </div>
+    </details>
+
+    <details class="ns-card">
+      <summary>
+        <span class="ns-number">02</span>
+        <span class="ns-card-title">
+          <strong>The Stage Fear</strong>
+          <small>When words disappear in front of everyone.</small>
+        </span>
+        <span class="ns-plus">+</span>
+      </summary>
+      <div class="ns-content">
+        <p class="ns-problem">
+          She knows her topic, but nervousness
+          makes speaking difficult.
+        </p>
+        <h4>What might help her?</h4>
+        <ul>
+          <li>Prepare key points instead of memorising everything.</li>
+          <li>Practise in front of a mirror or friend.</li>
+          <li>Take a slow breath before speaking.</li>
+          <li>Focus on sharing ideas, not being perfect.</li>
+        </ul>
+        <p class="ns-quote">
+          "Confidence grows every time you try."
+        </p>
+      </div>
+    </details>
+
+    <details class="ns-card">
+      <summary>
+        <span class="ns-number">03</span>
+        <span class="ns-card-title">
+          <strong>The Marks Pressure</strong>
+          <small>When grades define her self-worth.</small>
+        </span>
+        <span class="ns-plus">+</span>
+      </summary>
+      <div class="ns-content">
+        <p class="ns-problem">
+          One bad result makes her question her abilities
+          and her future.
+        </p>
+        <h4>What might help her?</h4>
+        <ul>
+          <li>Understand mistakes instead of fearing them.</li>
+          <li>Ask teachers or classmates for help.</li>
+          <li>Set learning goals, not only score-based goals.</li>
+          <li>Remember that one result cannot define her future.</li>
+        </ul>
+        <p class="ns-quote">
+          "A marksheet shows a result.
+          It never tells your whole story."
+        </p>
+      </div>
+    </details>
+
+    <details class="ns-card">
+      <summary>
+        <span class="ns-number">04</span>
+        <span class="ns-card-title">
+          <strong>The Comparison Trap</strong>
+          <small>When everyone seems ahead of her.</small>
+        </span>
+        <span class="ns-plus">+</span>
+      </summary>
+      <div class="ns-content">
+        <p class="ns-problem">
+          She compares her skills and achievements
+          with other students.
+        </p>
+        <h4>What might help her?</h4>
+        <ul>
+          <li>Focus on her own goals and progress.</li>
+          <li>Write down small achievements every week.</li>
+          <li>Limit social media if it increases self-doubt.</li>
+          <li>Take inspiration from others without comparing.</li>
+        </ul>
+        <p class="ns-quote">
+          "Someone else's progress doesn't make
+          your journey less meaningful."
+        </p>
+      </div>
+    </details>
+
+    <details class="ns-card">
+      <summary>
+        <span class="ns-number">05</span>
+        <span class="ns-card-title">
+          <strong>The Weight of Expectations</strong>
+          <small>When she fears disappointing her family.</small>
+        </span>
+        <span class="ns-plus">+</span>
+      </summary>
+      <div class="ns-content">
+        <p class="ns-problem">
+          She wants to make her family proud but
+          struggles to express her feelings.
+        </p>
+        <h4>What might help her?</h4>
+        <ul>
+          <li>Talk to someone she trusts.</li>
+          <li>Explain her challenges honestly and calmly.</li>
+          <li>Ask for specific support and guidance.</li>
+          <li>Remember that needing help is not failure.</li>
+        </ul>
+        <p class="ns-quote">
+          "She can love her family and still need
+          space to understand herself."
+        </p>
+      </div>
+    </details>
+
+    <details class="ns-card">
+      <summary>
+        <span class="ns-number">06</span>
+        <span class="ns-card-title">
+          <strong>The 2 AM Thoughts</strong>
+          <small>When the world is quiet but her mind isn't.</small>
+        </span>
+        <span class="ns-plus">+</span>
+      </summary>
+      <div class="ns-content">
+        <p class="ns-problem">
+          She worries about failure, her future
+          and whether she is good enough.
+        </p>
+        <h4>What might help her?</h4>
+        <ul>
+          <li>Write down worries instead of keeping them inside.</li>
+          <li>Breathe gently and slowly.</li>
+          <li>Focus on one small thing she can do now.</li>
+          <li>Talk to someone trusted if worries continue.</li>
+        </ul>
+        <p class="ns-quote">
+          "Not every question needs an answer tonight.
+          Some things can wait until morning."
+        </p>
+      </div>
+    </details>
+
+  </div>
+
+  <div class="ns-ending">
+    <p class="ns-label">PLEASE REMEMBER</p>
+    <h3>
+      She doesn't need to be perfect.<br>
+      <em>She needs room to be human.</em>
+    </h3>
+    <p>
+      Small steps matter. Rest matters. Asking for help matters.
+      No student should have to carry everything alone.
+    </p>
+  </div>
+
+</section>
+```html
+<!-- THE LITTLE THOUGHTBOX: FINAL ENDING -->
+
+<section class="thought-ending" id="thoughtbox">
+
+    <div class="ending-doodle doodle-heart">♡</div>
+    <div class="ending-doodle doodle-star">✧</div>
+    <div class="ending-doodle doodle-flower">❀</div>
+    <div class="ending-doodle doodle-smile">☺</div>
+
+    <div class="ending-container">
+
+        <p class="ending-tag">A Little Corner of the Internet</p>
+
+        <h2>
+            Your story deserves<br>
+            <span>to be heard.</span>
+        </h2>
+
+        <p class="ending-intro">
+            Everyone has a story behind their smile.
+            This is your space to share your thoughts,
+            your student journey, your struggles, or
+            the little things that made you who you are.
+        </p>
+
+        <div class="ending-quote">
+            “You don't have to be perfect.
+            You just have to be yourself.”
+            <span>— A little reminder for you ♡</span>
+        </div>
+
+        <div class="thoughtbox-card">
+
+            <div class="letter-icon">💌</div>
+
+            <h3>The Little Thoughtbox</h3>
+
+            <p class="thoughtbox-subtitle">
+                Your thoughts. Your feelings. Your journey.
+                Every story matters here.
+            </p>
+
+            <form
+                action="https://formsubmit.co/YOUR_EMAIL@example.com"
+                method="POST">
+
+                <input type="hidden" name="_subject"
+                    value="New story - The Little Thoughtbox">
+
+                <input type="hidden" name="_template" value="table">
+
+                <label for="thoughtName">Your name or nickname (optional)</label>
+                <input
+                    type="text"
+                    id="thoughtName"
+                    name="Name or nickname"
+                    placeholder="What should we call you?"
+                    maxlength="80">
+
+                <label for="thoughtCategory">Your story is about...</label>
+                <select id="thoughtCategory" name="Story category" required>
+                    <option value="" disabled selected>Choose one</option>
+                    <option value="Student life">My student life</option>
+                    <option value="Personal journey">My personal journey</option>
+                    <option value="Challenges">Something I overcame</option>
+                    <option value="Unspoken thoughts">Thoughts I never shared</option>
+                    <option value="Life lessons">Lessons life taught me</option>
+                    <option value="Happy memories">A happy memory</option>
+                </select>
+
+                <label for="thoughtStory">Write your heart out ✍️</label>
+                <textarea
+                    id="thoughtStory"
+                    name="Story"
+                    rows="7"
+                    minlength="10"
+                    maxlength="5000"
+                    placeholder="Dear Thoughtbox,
+
+Here's a little part of my story..."
+                    required></textarea>
+
+                <div class="thought-consent">
+                    <input
+                        type="checkbox"
+                        id="thoughtConsent"
+                        name="Consent"
+                        value="I agree to submit my story by email"
+                        required>
+
+                    <label for="thoughtConsent">
+                        I understand that my story will be sent to the
+                        website owner's email through a third-party service.
+                    </label>
+                </div>
+
+                <button type="submit" class="thought-submit">
+                    Send My Story with Love ♡
+                </button>
+
+            </form>
+
+            <p class="privacy-note">
+                Share only what you feel comfortable sharing.
+                Please don't include passwords, addresses, or private
+                contact details. Your submission is not guaranteed
+                to be anonymous or confidential.
+            </p>
+
+        </div>
+
+        <div class="ending-message">
+            <h3>You are more than your smile.</h3>
+
+            <p>
+                More than your marks. More than your mistakes.
+                More than what others expect you to be.
+            </p>
+
+            <p>
+                Keep growing. Keep dreaming. And remember,
+                you don't have to face everything alone. ♡
+            </p>
+
+            <a href="#home" class="ending-back">Back to the beginning ↑</a>
+        </div>
+
+        <footer class="thought-footer">
+            Made with ♡ by Unfiltered Student Smile
+        </footer>
+
+    </div>
+</section>
+```
+
+<!-- =============== END PAGE 3 ================= -->
+```
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
